@@ -1,0 +1,1 @@
+* Added link tags to google font api as well as font itself
