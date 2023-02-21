@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:300,400,500,600,700,800,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+:root {
+    /*colors*/
+    --red: #f7768e;
+    --orange: #ff9e64;
+    --brownish: #e0af68;
+    --green: #9ece6a;
+    --torqoise: #73daca;
+    --light-cyan: #b4f9f8;
+    --blue: #2ac3de;
+    --sky-blue: #7dcfff;
+    --blue-hue: #7aa2f7;
+    --lavender: #bb9af7;
+    --faded-purple: #c0caf5;
+    --slate: #a9b1d6;
+    --dark-slate: #9aa5ce;
+    --faded-khaki: #cfc9c2;
+    --dark-grey: #565f89;
+    --terminal-black: #414868;
+    --black: #1a1b26;
+    --neon-pink: rgb(216, 32, 164);
+    --neon-bg: hsl(323 21% 16%);
+    --nice-red: rgba(202, 76, 114, 0.815)
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+::selection{
+    background: rgb(64, 2, 165);
+}
+body {
+    background: var(--black);
+}
+
+/* Navbar Div */
+.navbar{
+    height: 75vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*Logo*/
+.logo{
+    width: 10%;
+    margin-left: 3%;
+}
+
+/*Navigation Bar
+Neon buttons by Kevil Powell
+https://www.youtube.com/watch?v=6xNcXwC6ikQ&list=WL&index=82*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin-right: 2%;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+nav ul li a{
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--blue);
+    border: var(--blue) 0.125em solid;
+    padding: .25em 1.25em;
+    border-radius: 0.25em;
+
+    text-shadow: 
+        0 0 0.125em hsl(0 0% 100% / .3),
+        0 0 0.45em currentColor ;
+
+    box-shadow: 
+       inset 0 0 .5em 0 var(--sky-blue),
+        0 0 .5em 0 var(--sky-blue);
+
+    position: relative;
+
+    transition: background-color 100ms linear;
+}
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 2em .5em var(--sky-blue);
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+nav ul li a:hover,
+nav ul li a:active{
+    background-color: var(--sky-blue);
+    color: var(--dark-grey);
+    text-shadow: none;
+}
+nav ul li a:hover::after{
+    opacity: 1;
+} 
+
+.hello{
+    position: absolute;
+    top: 40%;
+    left: 12%;
+}
+.hello h1{
+    pointer-events: none;
+    font-family: 'Sofia Sans', sans-serif;
+    color: rgba(216, 64, 208, 0.815);
+    margin: 20px 0px 20px;
+    font-size: 75px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+
+    text-shadow: 
+        0 0 0.125em hsl(0 0% 100% / .3),
+        0 0 0.45em currentColor ;
+
+    position: relative;
+}
+.hello h4{
+    color: var(--dark-slate);
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.me{
+    position: relative;
+    float: right;
+    width: 400px;
+    height: 400px;
+    margin-top: -8%;
+    margin-left: 41em;
+}
+
+/* About div*/
+.content{
+    display: flex;
+    margin-top: 2%;
+}
+.about{
+    margin-left: 12%;
+    flex: 50%;
+    color: var(--dark-slate);
+    padding-right: 1em;
+    font-size: 18px;
+}
+.about h2{
+    font-size: 40px;
+    background: -webkit-linear-gradient(var(--nice-red), var(--slate));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 1em;
+}
+.desc{
+    padding: 1em;
+    list-style-type: square;
+}
+.sidebar{
+    color: white;
+    width: auto;
+    background-color: var(--terminal-black);
+    margin-right: 11%;
+    padding: 1em;
+    font-size: 20px;
+}
+.sidebar h3{
+    color: var(--lavender);
+}
+.list{
+    padding: 1em;
+    color: var(--faded-purple);
+    list-style-type: square;
+}
+.content::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+/*Project div*/
+.projects h2{
+    margin-top: 1em;
+    position: relative;
+    margin-left: 12%;
+    font-size: 40px;
+    background: -webkit-linear-gradient(var(--nice-red), var(--slate));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    text-align: center;
+}
+.card{
+    height: 365px;
+    width: 335px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background: var(--terminal-black);
+    display: inline-block;
+    text-decoration: none;
+    padding: .25em 1.25em;
+    border-radius: 0.25em;
+
+    box-shadow: 10px 10px rgba(216, 64, 208, 0.815);
+    transform: scale(.85);
+    transition: transform .4s;
+
+}
+
+.card:hover{
+    opacity: 1;
+    transform: scale(1.1);
+} 
+.card i{
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+    color: var(--sky-blue);
+}
+
+.card .img {
+    height: 100px;
+    width: 100px;
+}
+h5{
+    color: lavender;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+.descproj p{
+    color: var(--blue);
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+.card .button{
+    /*Neon Button*/
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--blue);
+    border: rgba(216, 64, 208, 0.815) 0.125em solid;
+    padding: .25em 1.25em;
+    border-radius: 0.25em;
+    text-shadow: 
+        0 0 0.125em hsl(0 0% 100% / .3),
+        0 0 0.45em currentColor ;
+
+    box-shadow: 
+       inset 0 0 .5em 0 rgba(216, 64, 208, 0.815),
+        0 0 .5em 0 rgba(216, 64, 208, 0.815);
+
+    position: relative;
+
+    transition: background-color 100ms linear;
+}
+
+.card .button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 2em .5em rgba(216, 64, 208, 0.815);
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+.card .button:hover,
+.card .button:focus{
+    background-color: rgba(216, 64, 208, 0.815);
+    color: var(--neon-bg);
+    text-shadow: none;
+}
+.card .button:hover::after{
+    opacity: 1;
+} 
+
